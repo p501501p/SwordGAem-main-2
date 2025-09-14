@@ -55,7 +55,7 @@ public class PlayerStats : MonoBehaviour
             animator.SetBool("Death", true);
         }
     }
-    public void Restar()
+    public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
