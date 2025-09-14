@@ -65,6 +65,38 @@ public class PlayerController : MonoBehaviour
     }
 ```
 ```
+using UnityEngine;
+
+public class PlayerAnimation : MonoBehaviour
+{
+    public Animator animator;
+    private Rigidbody2D rb;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    void Update()
+    {
+        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+        animator.SetBool("IsJumping", rb.velocity.y > 0.1f);
+        animator.SetBool("IsFalling", rb.velocity.y < -0.1f);
+    }
+
+    public void Hurt()
+    {
+        animator.SetTrigger("Hurt");
+    }
+
+    public void Dead()
+    {
+        animator.SetTrigger("Dead");
+    }
+}
+```
+```
+```
 
 ![idle](https://github.com/user-attachments/assets/fab89433-84d4-44c9-9ee8-6c524b52659a)
 กระโดด
