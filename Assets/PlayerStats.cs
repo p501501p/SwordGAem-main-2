@@ -33,9 +33,7 @@ public class PlayerStats : MonoBehaviour
         animator.SetBool("Damage", true);
         logicScript.UpdateplayerUI(Health);
         if (Health <= 0)
-        {
-            animator.SetBool("Damage", false);
-            animator.SetBool("Death", true);
+        {  
             GetComponent<PolygonCollider2D>().enabled = false;
             GetComponentInParent<GatherInput>().OnDisable();
             GameOver.SetActive(true);
@@ -51,6 +49,10 @@ public class PlayerStats : MonoBehaviour
         {
             CanTakeDamage = true;
             animator.SetBool("Damage", false);
+        }
+        else
+        {
+            animator.SetBool("Death", true);
         }
     }
     public void Restar()

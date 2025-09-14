@@ -91,7 +91,7 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1101 &-3929080527018131408
+--- !u!1101 &-2716549878014925459
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,12 +108,12 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 1.0125002
+  m_TransitionDuration: 0.99360156
   m_TransitionOffset: 0
-  m_ExitTime: 0.00000001647689
+  m_ExitTime: 0
   m_HasExitTime: 0
   m_HasFixedDuration: 1
-  m_InterruptionSource: 0
+  m_InterruptionSource: 1
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
 --- !u!1102 &-972456045583119489
@@ -128,9 +128,10 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 798659070267769660}
+  - {fileID: -2716549878014925459}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
+  m_IKOnFeet: 1
   m_WriteDefaultValues: 1
   m_Mirror: 0
   m_SpeedParameterActive: 0
@@ -254,7 +255,7 @@ AnimatorStateMachine:
     m_Position: {x: 340, y: 0, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1685873390328999514}
-    m_Position: {x: 30, y: -50, z: 0}
+    m_Position: {x: 30, y: 170, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1152551473393281633}
     m_Position: {x: -350, y: 420, z: 0}
@@ -265,7 +266,6 @@ AnimatorStateMachine:
   m_AnyStateTransitions:
   - {fileID: 5434089383663617477}
   - {fileID: 6256964663889946484}
-  - {fileID: -3929080527018131408}
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
@@ -491,18 +491,21 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: Damage
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Death
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -972456045583119489}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.030822223
   m_TransitionOffset: 0
-  m_ExitTime: 0.75
+  m_ExitTime: 0
   m_HasExitTime: 0
   m_HasFixedDuration: 1
-  m_InterruptionSource: 0
+  m_InterruptionSource: 2
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
 --- !u!1101 &6791568658667851014
