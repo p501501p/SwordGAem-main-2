@@ -25,9 +25,8 @@
 ---
 
 ## 📜 โค้ดตัวอย่าง
-```
 ### 🔹 Script ควบคุมการกระโดด
-```csharp ... ```
+```
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -64,8 +63,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 ```
-```
 Script ควบคุมAnimation
+```
+
 using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
@@ -96,8 +96,9 @@ public class PlayerAnimation : MonoBehaviour
     }
 }
 ```
-```
 ###Script ควบคุมการโดนdamage & GameOVer
+```
+
 using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
@@ -170,7 +171,9 @@ Idle (ยืน)
 ![Hurt](https://github.com/user-attachments/assets/28c34f09-0d84-44cc-aacf-17a9feca2adb)
 ตาย (หยุดการเคลื่อนไหว)
 ![Dead](https://github.com/user-attachments/assets/2856189a-34d9-45bb-acbc-fc10e7158a74)
-
+แสดงเลือดของตัวละคร
+ลดเลือดของตัวละครเมื่อได้รับบาดเจ็บ
+GameOver
 ![UIRestart9-ezgif com-optimize](https://github.com/user-attachments/assets/2a229b84-15f6-4579-b3e2-a4eae12cdee9)
 
 
