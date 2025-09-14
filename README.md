@@ -173,7 +173,7 @@ Idle (ยืน)
 ![Dead](https://github.com/user-attachments/assets/2856189a-34d9-45bb-acbc-fc10e7158a74)
 แสดงเลือดของตัวละคร<br>
 ลดเลือดของตัวละครเมื่อได้รับบาดเจ็บ<br>
-GameOver
+GameOver<br>
 ![UIRestart9-ezgif com-optimize](https://github.com/user-attachments/assets/2a229b84-15f6-4579-b3e2-a4eae12cdee9)
 
 
