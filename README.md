@@ -5,8 +5,7 @@
 ตัวละครสามารถทำ Action ได้หลายแบบ เช่น วิ่ง กระโดด บาดเจ็บ และตาย พร้อมระบบ **UI Restart**  
 
 ---
-
-## 🚀 ฟีเจอร์หลัก
+🚀 ฟีเจอร์หลัก
 - ระบบควบคุมตัวละคร:
   - Idle (ยืน)
   - Run (เดิน/วิ่ง)
@@ -14,52 +13,21 @@
   - Hurt (บาดเจ็บ)
   - Dead (ตาย)
 - ระบบ UI Restart
-- เอฟเฟกต์กราฟิกด้วย ShaderLab + HLSL
 - จัดการ State การเคลื่อนไหวผ่าน Unity Animator
 
 ---
 
-## 🛠 เทคโนโลยีที่ใช้
-- **Unity Engine** (2D)
-- **C#**
-- **ShaderLab / HLSL**
-- **Unity Animator**
-
----
-
-## 📂 โครงสร้างไฟล์
-SwordGAem-main-2/
-│
-├── Assets/
-│ ├── Scripts/ # โค้ด C# ควบคุมเกม
-│ ├── Animations/ # Animation Controller
-│ ├── Sprites/ # Sprite ตัวละคร (Idle, Jump, Run, Hurt, Dead)
-│ └── UI/ # UI เช่น ปุ่ม Restart
-│
-├── ProjectSettings/
-├── Packages/
-├── README.md
-└── .gitignore
-
-csharp
-คัดลอกโค้ด
-
----
-
-## 🎮 วิธีการเล่น
-1. เปิดโปรเจกต์ด้วย **Unity (แนะนำ 2021 ขึ้นไป)**  
-2. กด **Play** เพื่อเริ่มเกม  
-3. ควบคุมตัวละครด้วยคีย์บอร์ด:  
-   - **← / →** : เดินซ้าย-ขวา  
-   - **Spacebar** : กระโดด  
-4. เมื่อแพ้ สามารถกด **Restart** เพื่อเริ่มเกมใหม่  
+## 🎮 การควบคุม
+- **← / →** : เดินซ้าย-ขวา  
+- **Spacebar** : กระโดด  
+- เมื่อแพ้ สามารถกด **Restart** เพื่อเริ่มเกมใหม่  
 
 ---
 
 ## 📜 โค้ดตัวอย่าง
-
+```
 ### 🔹 Script ควบคุมการกระโดด
-```csharp
+```csharp ... ```
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -95,47 +63,9 @@ public class PlayerController : MonoBehaviour
             grounded = false;
         }
     }
-}
-🔹 Script จัดการสถานะอนิเมชัน
-csharp
-คัดลอกโค้ด
-using UnityEngine;
+```
+```
 
-public class PlayerAnimation : MonoBehaviour
-{
-    public Animator animator;
-    private Rigidbody2D rb;
-
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
-
-    void Update()
-    {
-        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
-        animator.SetBool("IsJumping", rb.velocity.y > 0.1f);
-        animator.SetBool("IsFalling", rb.velocity.y < -0.1f);
-    }
-
-    public void Hurt()
-    {
-        animator.SetTrigger("Hurt");
-    }
-
-    public void Dead()
-    {
-        animator.SetTrigger("Dead");
-    }
-}
-📸 ตัวอย่างภาพ
-(สามารถใส่ภาพจาก Assets/Sprites ได้ เช่น Idle.png, Run.png, Jump.png)
-
-markdown
-คัดลอกโค้ด
-![Idle](Assets/Sprites/Idle.png)
-![Run](Assets/Sprites/Run.png)
-![Jump](Assets/Sprites/Jump.png)
 ![idle](https://github.com/user-attachments/assets/fab89433-84d4-44c9-9ee8-6c524b52659a)
 กระโดด
 ![jump](https://github.com/user-attachments/assets/1a5b77cb-2b43-469b-a909-995163d5be48)
@@ -147,3 +77,8 @@ markdown
 ![Dead](https://github.com/user-attachments/assets/2856189a-34d9-45bb-acbc-fc10e7158a74)
 
 ![UIRestart9-ezgif com-optimize](https://github.com/user-attachments/assets/2a229b84-15f6-4579-b3e2-a4eae12cdee9)
+
+
+
+
+
